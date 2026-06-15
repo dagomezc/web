@@ -1004,6 +1004,7 @@
           meta: ['Web design', 'UI', '2022'],
           desc: 'Marketing site for a global consultancy — refining their visual language across landing, services, and contact, with attention to typographic rhythm and image hierarchy.',
           url: 'http://www.caveglobal.com/',
+          hideVisit: true,
           slots: [
             {
               cls: 'lead',
@@ -1036,49 +1037,6 @@
               alt: 'STM Education homepage'
             }
           ]
-        },
-        {
-          n: '03',
-          title: 'Neith SMP',
-          meta: ['Web design', 'UI', '2020'],
-          desc: 'Full website design and development for Neith SMP — structured information architecture and a clean visual system built to convert visitors.',
-          url: 'http://neithsmp.co/',
-          slots: [
-            {
-              cls: 'lead',
-              img: 'img/portfolio/2-thumb.jpg',
-              alt: 'Neith SMP homepage'
-            }
-          ]
-        },
-        {
-          n: '04',
-          title: 'ECAP Ingeniería',
-          meta: ['Web design', '2019'],
-          desc: "Corporate web presence for ECAP Ingeniería S.A.S — a clean, professional site communicating the firm's engineering services and project portfolio.",
-          url: 'http://ecapingenieria.com/',
-          flip: true,
-          slots: [
-            {
-              cls: 'lead',
-              img: 'img/portfolio/5-thumb.jpg',
-              alt: 'ECAP Ingeniería homepage'
-            }
-          ]
-        },
-        {
-          n: '05',
-          title: 'Liniotipia Martínez',
-          meta: ['Web design', '2019'],
-          desc: 'Digital identity and web design for a traditional print shop — bringing decades of heritage craftsmanship into a modern online presence.',
-          url: 'https://www.linotipiamartinez.com.co/',
-          slots: [
-            {
-              cls: 'lead',
-              img: 'img/portfolio/4-thumb.jpg',
-              alt: 'Liniotipia Martínez homepage'
-            }
-          ]
         }
       ]
 
@@ -1099,7 +1057,7 @@
                 ))}
               </div>
               <p className='desc'>{p.desc}</p>
-              {p.url ? (
+              {p.hideVisit ? null : p.url ? (
                 <a
                   className='visit'
                   href={p.url}
