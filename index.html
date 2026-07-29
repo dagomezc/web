@@ -785,6 +785,17 @@
         object-fit: cover;
         display: block;
       }
+      .proj-note {
+        font-family: var(--mono);
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--ink-soft);
+        margin-top: 10px;
+        padding: 8px 10px;
+        border-left: 2px solid var(--rule-soft);
+        line-height: 1.5;
+      }
     </style>
   </head>
   <body>
@@ -974,10 +985,10 @@
           <div class="col">
             <div class="label">LinkedIn</div>
             <a
-              href="https://www.linkedin.com/in/diego-alejandro-g%C3%B3mez-copete-2a571468/"
+              href="https://www.linkedin.com/in/dagomezco/"
               target="_blank"
               rel="noopener"
-              >/in/diego-gómez-copete</a
+              >/in/dagomezco</a
             >
           </div>
           <div class="col">
@@ -1000,6 +1011,23 @@
       const PROJECTS = [
         {
           n: '01',
+          title: 'First Arriving',
+          meta: ['UI design', 'Web design', 'Current'],
+          desc: 'Ongoing UI and product design for First Arriving — designing interfaces and visual systems for a suite of dispatch and emergency-response software serving the public-safety community.',
+          note: 'See the work done for this platform →',
+          url: 'https://firstarriving.com/platform/',
+          urlLabel: 'View platform',
+          flip: true,
+          slots: [
+            {
+              cls: 'lead',
+              img: 'img/portfolio/first-arriving.jpg',
+              alt: 'First Arriving dashboard on multiple devices'
+            }
+          ]
+        },
+        {
+          n: '02',
           title: 'Cave Global',
           meta: ['Web design', 'UI', '2022'],
           desc: 'Marketing site for a global consultancy — refining their visual language across landing, services, and contact, with attention to typographic rhythm and image hierarchy.',
@@ -1024,7 +1052,7 @@
           ]
         },
         {
-          n: '02',
+          n: '03',
           title: 'STM Education',
           meta: ['Web design', 'Edu-tech', '2021'],
           desc: 'Education platform marketing site — a friendlier, brighter system designed to convert prospective students into program inquiries.',
@@ -1057,6 +1085,9 @@
                 ))}
               </div>
               <p className='desc'>{p.desc}</p>
+              {p.note && (
+                <p className='proj-note'>{p.note}</p>
+              )}
               {p.hideVisit ? null : p.url ? (
                 <a
                   className='visit'
@@ -1064,7 +1095,7 @@
                   target='_blank'
                   rel='noopener'
                 >
-                  <span>Visit live site</span>
+                  <span>{p.urlLabel || 'Visit live site'}</span>
                   <svg
                     viewBox='0 0 12 12'
                     fill='none'
