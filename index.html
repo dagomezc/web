@@ -1,1018 +1,1395 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Diego Alejandro Gómez Copete — Graphic & UI/UX Designer</title>
-    <meta
-      name="description"
-      content="Portfolio of Diego Alejandro Gómez Copete — Graphic Designer (Universidad Los Libertadores) specializing in web design, UI, and digital media."
-    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diego Alejandro Gómez Copete — Graphic & UI/UX Designer</title>
+  <meta name="description"
+    content="Portfolio of Diego Alejandro Gómez Copete — Graphic Designer (Universidad Los Libertadores) specializing in web design, UI, and digital media." />
 
-    <script
-      src="https://unpkg.com/react@18.3.1/umd/react.development.js"
-      integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"
-      integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"
-      integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y"
-      crossorigin="anonymous"
-    ></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
 
-    <script src="image-slot.js"></script>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js"
+    integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"
+    integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"
+    integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y"
+    crossorigin="anonymous"></script>
 
-    <style>
-      :root {
-        --ink: #0a0a0a;
-        --paper: #ffffff;
-        --ink-soft: #6b6b6b;
-        --rule: #0a0a0a;
-        --rule-soft: #e5e5e5;
-        --display: 'Geist', -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
-          sans-serif;
-        --sans: 'Geist', -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
-          sans-serif;
-        --mono: 'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace;
-        --maxw: 1480px;
-        --col-gap: clamp(16px, 2vw, 28px);
+  <script src="image-slot.js"></script>
+
+  <style>
+    :root {
+      --ink: #0a0a0a;
+      --paper: #ffffff;
+      --ink-soft: #6b6b6b;
+      --rule: #0a0a0a;
+      --rule-soft: #e5e5e5;
+      --display: 'Geist', -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
+        sans-serif;
+      --sans: 'Geist', -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
+        sans-serif;
+      --mono: 'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+      --maxw: 1480px;
+      --col-gap: clamp(16px, 2vw, 28px);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-feature-settings: 'ss01', 'ss02', 'cv11';
+    }
+
+    body {
+      font-size: 15px;
+      line-height: 1.5;
+      letter-spacing: -0.005em;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    ::selection {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .mono {
+      font-family: var(--mono);
+      font-feature-settings: 'zero', 'ss01';
+    }
+
+    .uc {
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── Top nav ─────────────────────────────────────────── */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: var(--paper);
+      border-bottom: 1px solid var(--rule);
+      padding: 16px clamp(20px, 4vw, 48px);
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 24px;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0;
+    }
+
+    .nav .left,
+    .nav .right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .nav .right {
+      justify-content: flex-end;
+    }
+
+    .nav .brand {
+      font-weight: 500;
+    }
+
+    .nav .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--ink-soft);
+    }
+
+    .nav .status::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #16a34a;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
       }
 
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
+      50% {
+        opacity: 0.4;
       }
-      html,
-      body {
-        background: var(--paper);
-        color: var(--ink);
-        font-family: var(--sans);
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        font-feature-settings: 'ss01', 'ss02', 'cv11';
-      }
-      body {
-        font-size: 15px;
-        line-height: 1.5;
-        letter-spacing: -0.005em;
-      }
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-      img {
-        max-width: 100%;
-        display: block;
-      }
-      ::selection {
-        background: var(--ink);
-        color: var(--paper);
-      }
+    }
 
-      .mono {
-        font-family: var(--mono);
-        font-feature-settings: 'zero', 'ss01';
-      }
-      .uc {
-        text-transform: uppercase;
-        letter-spacing: 0.02em;
-      }
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 24px;
+    }
 
-      /* ── Top nav ─────────────────────────────────────────── */
+    .nav a:hover {
+      color: var(--ink-soft);
+    }
+
+    /* ── Language Switcher ──────────────────────────────── */
+    .lang-switch {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--rule);
+      background: var(--paper);
+      padding: 2px;
+      gap: 2px;
+    }
+
+    .lang-btn {
+      appearance: none;
+      background: transparent;
+      border: none;
+      color: var(--ink-soft);
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      padding: 4px 8px;
+      cursor: pointer;
+      line-height: 1;
+      transition: color 0.15s ease, background-color 0.15s ease;
+    }
+
+    .lang-btn:hover {
+      color: var(--ink);
+    }
+
+    .lang-btn.active {
+      background: var(--ink);
+      color: var(--paper);
+      font-weight: 600;
+    }
+
+    @media (max-width: 720px) {
       .nav {
-        position: sticky;
-        top: 0;
-        z-index: 50;
-        background: var(--paper);
-        border-bottom: 1px solid var(--rule);
-        padding: 16px clamp(20px, 4vw, 48px);
-        display: grid;
-        grid-template-columns: 1fr auto 1fr;
-        align-items: center;
-        gap: 24px;
-        font-family: var(--mono);
-        font-size: 12px;
-        letter-spacing: 0;
-      }
-      .nav .left,
-      .nav .right {
-        display: flex;
-        align-items: center;
-        gap: 18px;
-      }
-      .nav .right {
-        justify-content: flex-end;
-      }
-      .nav .brand {
-        font-weight: 500;
-      }
-      .nav .status {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        color: var(--ink-soft);
-      }
-      .nav .status::before {
-        content: '';
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        background: #16a34a;
-        animation: pulse 2s ease-in-out infinite;
-      }
-      @keyframes pulse {
-        0%,
-        100% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0.4;
-        }
-      }
-      .nav ul {
-        list-style: none;
-        display: flex;
-        gap: 24px;
-      }
-      .nav a:hover {
-        color: var(--ink-soft);
+        padding: 12px 20px;
+        gap: 12px;
       }
 
-      /* ── Hero ────────────────────────────────────────────── */
-      .hero {
-        padding: clamp(40px, 7vw, 96px) clamp(20px, 4vw, 48px)
-          clamp(40px, 6vw, 72px);
-        max-width: var(--maxw);
-        margin: 0 auto;
-        border-bottom: 1px solid var(--rule);
-        position: relative;
+      .nav .status {
+        display: none;
       }
+
+      .nav ul {
+        gap: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nav {
+        grid-template-columns: 1fr auto;
+      }
+
+      .nav ul {
+        display: none;
+      }
+    }
+
+    /* ── Hero ────────────────────────────────────────────── */
+    .hero {
+      padding: clamp(40px, 7vw, 96px) clamp(20px, 4vw, 48px) clamp(40px, 6vw, 72px);
+      max-width: var(--maxw);
+      margin: 0 auto;
+      border-bottom: 1px solid var(--rule);
+      position: relative;
+    }
+
+    .hero .meta-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--ink-soft);
+      margin-bottom: clamp(48px, 7vw, 96px);
+      border-bottom: 1px solid var(--rule-soft);
+      padding-bottom: 16px;
+    }
+
+    .hero .meta-row .lab {
+      display: block;
+      color: var(--ink);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .hero h1 {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: clamp(56px, 13vw, 220px);
+      line-height: 0.86;
+      letter-spacing: -0.055em;
+      margin: 0;
+      text-wrap: balance;
+    }
+
+    .hero h1 .light {
+      font-weight: 300;
+    }
+
+    .hero h1 .out {
+      -webkit-text-stroke: 1.5px var(--ink);
+      color: transparent;
+      font-weight: 500;
+    }
+
+    .hero .arrow {
+      display: inline-block;
+      transform: translateY(-0.05em);
+      margin-right: 0.04em;
+    }
+
+    .hero .subhead {
+      margin-top: clamp(32px, 5vw, 64px);
+      display: grid;
+      grid-template-columns: 5fr 4fr 4fr;
+      gap: clamp(20px, 3vw, 48px);
+      align-items: start;
+      border-top: 1px solid var(--rule-soft);
+      padding-top: 32px;
+    }
+
+    .hero .subhead .col .label {
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--ink-soft);
+      margin-bottom: 12px;
+    }
+
+    .hero .subhead .col p {
+      font-size: 15px;
+      line-height: 1.55;
+      max-width: 38ch;
+    }
+
+    @media (max-width: 820px) {
       .hero .meta-row {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 24px;
-        font-family: var(--mono);
-        font-size: 11px;
-        color: var(--ink-soft);
-        margin-bottom: clamp(48px, 7vw, 96px);
-        border-bottom: 1px solid var(--rule-soft);
-        padding-bottom: 16px;
-      }
-      .hero .meta-row .lab {
-        display: block;
-        color: var(--ink);
-        margin-bottom: 4px;
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
-      }
-      .hero h1 {
-        font-family: var(--display);
-        font-weight: 500;
-        font-size: clamp(56px, 13vw, 220px);
-        line-height: 0.86;
-        letter-spacing: -0.055em;
-        margin: 0;
-        text-wrap: balance;
-      }
-      .hero h1 .light {
-        font-weight: 300;
-      }
-      .hero h1 .out {
-        -webkit-text-stroke: 1.5px var(--ink);
-        color: transparent;
-        font-weight: 500;
-      }
-      .hero .arrow {
-        display: inline-block;
-        transform: translateY(-0.05em);
-        margin-right: 0.04em;
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .hero .subhead {
-        margin-top: clamp(32px, 5vw, 64px);
-        display: grid;
-        grid-template-columns: 5fr 4fr 4fr;
-        gap: clamp(20px, 3vw, 48px);
-        align-items: start;
-        border-top: 1px solid var(--rule-soft);
-        padding-top: 32px;
+        grid-template-columns: 1fr;
+        gap: 24px;
       }
-      .hero .subhead .col .label {
-        font-family: var(--mono);
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
-        color: var(--ink-soft);
-        margin-bottom: 12px;
-      }
-      .hero .subhead .col p {
-        font-size: 15px;
-        line-height: 1.55;
-        max-width: 38ch;
-      }
-      @media (max-width: 820px) {
-        .hero .meta-row {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        .hero .subhead {
-          grid-template-columns: 1fr;
-          gap: 24px;
-        }
+    }
+
+    /* Marquee strip */
+    .strip {
+      border-bottom: 1px solid var(--rule);
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 14px 0;
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .strip .track {
+      display: inline-flex;
+      gap: 0;
+      animation: marquee 42s linear infinite;
+      font-family: var(--display);
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      padding-right: 0;
+    }
+
+    .strip .track span {
+      padding: 0 28px;
+      display: inline-flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .strip .track span::after {
+      content: '◆';
+      font-size: 8px;
+      opacity: 0.7;
+    }
+
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
       }
 
-      /* Marquee strip */
-      .strip {
-        border-bottom: 1px solid var(--rule);
-        overflow: hidden;
-        white-space: nowrap;
-        padding: 14px 0;
-        background: var(--ink);
-        color: var(--paper);
+      to {
+        transform: translateX(-50%);
       }
-      .strip .track {
-        display: inline-flex;
-        gap: 0;
-        animation: marquee 42s linear infinite;
-        font-family: var(--display);
-        font-size: 18px;
-        font-weight: 500;
-        letter-spacing: -0.02em;
-        padding-right: 0;
-      }
-      .strip .track span {
-        padding: 0 28px;
-        display: inline-flex;
-        align-items: center;
-        gap: 28px;
-      }
-      .strip .track span::after {
-        content: '◆';
-        font-size: 8px;
-        opacity: 0.7;
-      }
-      @keyframes marquee {
-        from {
-          transform: translateX(0);
-        }
-        to {
-          transform: translateX(-50%);
-        }
-      }
+    }
 
-      /* ── Section scaffold ────────────────────────────────── */
-      section.block {
-        max-width: var(--maxw);
-        margin: 0 auto;
-        padding: clamp(60px, 9vw, 140px) clamp(20px, 4vw, 48px);
-        border-bottom: 1px solid var(--rule);
-      }
+    /* ── Section scaffold ────────────────────────────────── */
+    section.block {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: clamp(60px, 9vw, 140px) clamp(20px, 4vw, 48px);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: clamp(20px, 4vw, 64px);
+      align-items: end;
+      margin-bottom: clamp(40px, 6vw, 80px);
+      border-bottom: 1px solid var(--rule-soft);
+      padding-bottom: 24px;
+    }
+
+    .section-head .num {
+      font-family: var(--mono);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--ink-soft);
+    }
+
+    .section-head .num b {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .section-head h2 {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: clamp(36px, 6vw, 88px);
+      line-height: 0.95;
+      letter-spacing: -0.045em;
+      text-wrap: balance;
+    }
+
+    .section-head h2 .light {
+      font-weight: 300;
+    }
+
+    @media (max-width: 720px) {
       .section-head {
-        display: grid;
-        grid-template-columns: 200px 1fr;
-        gap: clamp(20px, 4vw, 64px);
-        align-items: end;
-        margin-bottom: clamp(40px, 6vw, 80px);
-        border-bottom: 1px solid var(--rule-soft);
-        padding-bottom: 24px;
-      }
-      .section-head .num {
-        font-family: var(--mono);
-        font-size: 12px;
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
-        color: var(--ink-soft);
-      }
-      .section-head .num b {
-        color: var(--ink);
-        font-weight: 500;
-      }
-      .section-head h2 {
-        font-family: var(--display);
-        font-weight: 500;
-        font-size: clamp(36px, 6vw, 88px);
-        line-height: 0.95;
-        letter-spacing: -0.045em;
-        text-wrap: balance;
-      }
-      .section-head h2 .light {
-        font-weight: 300;
-      }
-      @media (max-width: 720px) {
-        .section-head {
-          grid-template-columns: 1fr;
-          gap: 12px;
-          align-items: start;
-        }
-      }
-
-      /* ── About ───────────────────────────────────────────── */
-      .about-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: clamp(32px, 5vw, 96px);
+        grid-template-columns: 1fr;
+        gap: 12px;
         align-items: start;
       }
-      .about-lede {
-        font-family: var(--display);
-        font-size: clamp(22px, 2.6vw, 36px);
-        line-height: 1.18;
-        font-weight: 400;
-        letter-spacing: -0.025em;
-        text-wrap: pretty;
+    }
+
+    /* ── About ───────────────────────────────────────────── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(32px, 5vw, 96px);
+      align-items: start;
+    }
+
+    .about-lede {
+      font-family: var(--display);
+      font-size: clamp(22px, 2.6vw, 36px);
+      line-height: 1.18;
+      font-weight: 400;
+      letter-spacing: -0.025em;
+      text-wrap: pretty;
+    }
+
+    .about-lede .mute {
+      color: var(--ink-soft);
+    }
+
+    .about-lede em {
+      font-style: normal;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 2px;
+    }
+
+    .about-body p {
+      margin-bottom: 1.1em;
+      color: var(--ink-soft);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .about-body p strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    @media (max-width: 860px) {
+      .about-grid {
+        grid-template-columns: 1fr;
       }
-      .about-lede .mute {
-        color: var(--ink-soft);
-      }
-      .about-lede em {
-        font-style: normal;
-        border-bottom: 1px solid var(--ink);
-        padding-bottom: 2px;
-      }
-      .about-body p {
-        margin-bottom: 1.1em;
-        color: var(--ink-soft);
-        font-size: 15px;
-        line-height: 1.7;
-      }
-      .about-body p strong {
-        color: var(--ink);
-        font-weight: 600;
-      }
-      @media (max-width: 860px) {
-        .about-grid {
-          grid-template-columns: 1fr;
-        }
+    }
+
+    .facts {
+      margin-top: clamp(40px, 6vw, 72px);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border-top: 1px solid var(--rule);
+    }
+
+    .fact {
+      padding: 24px 20px 28px;
+      border-right: 1px solid var(--rule-soft);
+    }
+
+    .fact:last-child {
+      border-right: none;
+    }
+
+    .fact .k {
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--ink-soft);
+      margin-bottom: 10px;
+    }
+
+    .fact .v {
+      font-family: var(--display);
+      font-size: clamp(20px, 2vw, 28px);
+      font-weight: 500;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    @media (max-width: 720px) {
+      .facts {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      .facts {
-        margin-top: clamp(40px, 6vw, 72px);
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 0;
-        border-top: 1px solid var(--rule);
-      }
-      .fact {
-        padding: 24px 20px 28px;
-        border-right: 1px solid var(--rule-soft);
-      }
-      .fact:last-child {
+      .fact:nth-child(2) {
         border-right: none;
       }
-      .fact .k {
-        font-family: var(--mono);
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
-        color: var(--ink-soft);
-        margin-bottom: 10px;
-      }
-      .fact .v {
-        font-family: var(--display);
-        font-size: clamp(20px, 2vw, 28px);
-        font-weight: 500;
-        line-height: 1.15;
-        letter-spacing: -0.02em;
-      }
-      @media (max-width: 720px) {
-        .facts {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        .fact:nth-child(2) {
-          border-right: none;
-        }
-        .fact:nth-child(1),
-        .fact:nth-child(2) {
-          border-bottom: 1px solid var(--rule-soft);
-        }
-      }
 
-      /* ── Projects ────────────────────────────────────────── */
-      .projects {
-        display: flex;
-        flex-direction: column;
-        gap: clamp(80px, 10vw, 140px);
+      .fact:nth-child(1),
+      .fact:nth-child(2) {
+        border-bottom: 1px solid var(--rule-soft);
       }
-      .project {
-        display: grid;
-        grid-template-columns: 5fr 7fr;
-        gap: clamp(24px, 4vw, 64px);
-        align-items: start;
-      }
+    }
+
+    /* ── Projects ────────────────────────────────────────── */
+    .projects {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(80px, 10vw, 140px);
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      gap: clamp(24px, 4vw, 64px);
+      align-items: start;
+    }
+
+    .project.flip {
+      grid-template-columns: 7fr 5fr;
+    }
+
+    .project.flip .info {
+      order: 2;
+    }
+
+    .project.flip .gallery {
+      order: 1;
+    }
+
+    .project .info {
+      position: sticky;
+      top: 80px;
+    }
+
+    .project .index {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 16px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .project .index .pill {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 10px;
+    }
+
+    .project .title {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: clamp(38px, 5vw, 72px);
+      line-height: 0.95;
+      letter-spacing: -0.045em;
+      margin-bottom: 18px;
+    }
+
+    .project .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 22px;
+    }
+
+    .project .meta span {
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      border: 1px solid var(--rule-soft);
+      padding: 5px 10px;
+      border-radius: 0;
+      color: var(--ink-soft);
+    }
+
+    .project .desc {
+      color: var(--ink-soft);
+      margin-bottom: 22px;
+      max-width: 46ch;
+      line-height: 1.65;
+    }
+
+    .project .visit {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--mono);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      border: 1px solid var(--ink);
+      padding: 10px 14px;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .project .visit:hover {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .project .visit svg {
+      width: 11px;
+      height: 11px;
+    }
+
+    .gallery {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    .gallery .lead {
+      grid-column: 1 / -1;
+    }
+
+    .gallery .half {
+      grid-column: span 3;
+    }
+
+    .gallery .third {
+      grid-column: span 2;
+    }
+
+    .gallery .full {
+      grid-column: 1 / -1;
+    }
+
+    image-slot {
+      width: 100%;
+      background: #fafafa;
+      border: 1px solid var(--rule-soft);
+      border-radius: 0;
+    }
+
+    .lead image-slot {
+      aspect-ratio: 16 / 10;
+    }
+
+    .half image-slot {
+      aspect-ratio: 4 / 3;
+    }
+
+    .third image-slot {
+      aspect-ratio: 1 / 1;
+    }
+
+    .full image-slot {
+      aspect-ratio: 16 / 7;
+    }
+
+    @media (max-width: 860px) {
+
+      .project,
       .project.flip {
-        grid-template-columns: 7fr 5fr;
-      }
-      .project.flip .info {
-        order: 2;
-      }
-      .project.flip .gallery {
-        order: 1;
+        grid-template-columns: 1fr;
       }
 
       .project .info {
-        position: sticky;
-        top: 80px;
-      }
-      .project .index {
-        font-family: var(--mono);
-        font-size: 12px;
-        color: var(--ink-soft);
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
-        margin-bottom: 16px;
-        display: flex;
-        gap: 12px;
-        align-items: center;
-      }
-      .project .index .pill {
-        background: var(--ink);
-        color: var(--paper);
-        padding: 2px 8px;
-        border-radius: 999px;
-        font-size: 10px;
-      }
-      .project .title {
-        font-family: var(--display);
-        font-weight: 500;
-        font-size: clamp(38px, 5vw, 72px);
-        line-height: 0.95;
-        letter-spacing: -0.045em;
-        margin-bottom: 18px;
-      }
-      .project .meta {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 6px;
-        margin-bottom: 22px;
-      }
-      .project .meta span {
-        font-family: var(--mono);
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
-        border: 1px solid var(--rule-soft);
-        padding: 5px 10px;
-        border-radius: 0;
-        color: var(--ink-soft);
-      }
-      .project .desc {
-        color: var(--ink-soft);
-        margin-bottom: 22px;
-        max-width: 46ch;
-        line-height: 1.65;
-      }
-      .project .visit {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        font-family: var(--mono);
-        font-size: 12px;
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
-        border: 1px solid var(--ink);
-        padding: 10px 14px;
-        transition: background 0.15s, color 0.15s;
-      }
-      .project .visit:hover {
-        background: var(--ink);
-        color: var(--paper);
-      }
-      .project .visit svg {
-        width: 11px;
-        height: 11px;
+        position: static;
       }
 
-      .gallery {
-        display: grid;
-        gap: 12px;
-        grid-template-columns: repeat(6, 1fr);
-      }
-      .gallery .lead {
-        grid-column: 1 / -1;
-      }
-      .gallery .half {
-        grid-column: span 3;
-      }
-      .gallery .third {
-        grid-column: span 2;
-      }
-      .gallery .full {
-        grid-column: 1 / -1;
+      .project.flip .info {
+        order: 0;
       }
 
-      image-slot {
-        width: 100%;
-        background: #fafafa;
-        border: 1px solid var(--rule-soft);
-        border-radius: 0;
+      .project.flip .gallery {
+        order: 1;
       }
-      .lead image-slot {
-        aspect-ratio: 16 / 10;
-      }
-      .half image-slot {
-        aspect-ratio: 4 / 3;
-      }
-      .third image-slot {
-        aspect-ratio: 1 / 1;
-      }
-      .full image-slot {
-        aspect-ratio: 16 / 7;
-      }
+    }
 
-      @media (max-width: 860px) {
-        .project,
-        .project.flip {
-          grid-template-columns: 1fr;
-        }
-        .project .info {
-          position: static;
-        }
-        .project.flip .info {
-          order: 0;
-        }
-        .project.flip .gallery {
-          order: 1;
-        }
-      }
+    /* ── Skills ──────────────────────────────────────────── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border-top: 1px solid var(--rule);
+    }
 
-      /* ── Skills ──────────────────────────────────────────── */
+    .skill {
+      padding: 28px 24px 32px;
+      border-right: 1px solid var(--rule-soft);
+      border-bottom: 1px solid var(--rule-soft);
+      transition: background 0.2s;
+    }
+
+    .skill:hover {
+      background: #fafafa;
+    }
+
+    .skill:nth-child(3n) {
+      border-right: none;
+    }
+
+    .skill .num {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--ink-soft);
+      margin-bottom: 16px;
+      letter-spacing: 0.04em;
+    }
+
+    .skill h3 {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: clamp(20px, 2vw, 26px);
+      margin-bottom: 8px;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+    }
+
+    .skill p {
+      font-size: 14px;
+      color: var(--ink-soft);
+      line-height: 1.55;
+    }
+
+    @media (max-width: 860px) {
       .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 0;
-        border-top: 1px solid var(--rule);
+        grid-template-columns: 1fr;
       }
+
       .skill {
-        padding: 28px 24px 32px;
-        border-right: 1px solid var(--rule-soft);
-        border-bottom: 1px solid var(--rule-soft);
-        transition: background 0.2s;
-      }
-      .skill:hover {
-        background: #fafafa;
-      }
-      .skill:nth-child(3n) {
         border-right: none;
       }
-      .skill .num {
-        font-family: var(--mono);
-        font-size: 12px;
-        color: var(--ink-soft);
-        margin-bottom: 16px;
-        letter-spacing: 0.04em;
-      }
-      .skill h3 {
-        font-family: var(--display);
-        font-weight: 500;
-        font-size: clamp(20px, 2vw, 26px);
-        margin-bottom: 8px;
-        line-height: 1.15;
-        letter-spacing: -0.025em;
-      }
-      .skill p {
-        font-size: 14px;
-        color: var(--ink-soft);
-        line-height: 1.55;
-      }
-      @media (max-width: 860px) {
-        .skills-grid {
-          grid-template-columns: 1fr;
-        }
-        .skill {
-          border-right: none;
-        }
-      }
+    }
 
-      .tools-row {
-        margin-top: clamp(40px, 5vw, 64px);
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        align-items: center;
-      }
-      .tools-row .label {
-        font-family: var(--mono);
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
-        color: var(--ink-soft);
-        width: 100%;
-        margin-bottom: 12px;
-      }
-      .tools-row .tool {
-        font-family: var(--mono);
-        font-size: 12px;
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
-        border: 1px solid var(--rule);
-        padding: 8px 14px;
-      }
+    .tools-row {
+      margin-top: clamp(40px, 5vw, 64px);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
 
-      /* ── Contact ─────────────────────────────────────────── */
-      .contact {
-        background: var(--ink);
-        color: var(--paper);
-        padding: clamp(60px, 9vw, 140px) clamp(20px, 4vw, 48px);
-        --rule-soft: #2a2a2a;
-      }
-      .contact-inner {
-        max-width: var(--maxw);
-        margin: 0 auto;
-      }
-      .contact .lead-row {
-        font-family: var(--mono);
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
-        color: #999;
-        margin-bottom: 32px;
-        display: flex;
-        justify-content: space-between;
-        gap: 16px;
-        flex-wrap: wrap;
-      }
-      .contact h2 {
-        font-family: var(--display);
-        font-weight: 400;
-        font-size: clamp(48px, 11vw, 200px);
-        line-height: 0.86;
-        letter-spacing: -0.055em;
-        margin-bottom: clamp(40px, 5vw, 64px);
-        text-wrap: balance;
-      }
-      .contact h2 .out {
-        -webkit-text-stroke: 1.5px var(--paper);
-        color: transparent;
-        font-weight: 500;
-      }
-      .contact h2 .light {
-        font-weight: 300;
-      }
-      .contact a.mail {
-        font-family: var(--display);
-        font-size: clamp(22px, 3vw, 40px);
-        border-bottom: 1px solid var(--paper);
-        padding-bottom: 6px;
-        display: inline-block;
-        letter-spacing: -0.02em;
-        font-weight: 400;
-      }
-      .contact a.mail:hover {
-        color: #999;
-        border-color: #999;
-      }
+    .tools-row .label {
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--ink-soft);
+      width: 100%;
+      margin-bottom: 12px;
+    }
+
+    .tools-row .tool {
+      font-family: var(--mono);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      border: 1px solid var(--rule);
+      padding: 8px 14px;
+    }
+
+    /* ── Contact ─────────────────────────────────────────── */
+    .contact {
+      background: var(--ink);
+      color: var(--paper);
+      padding: clamp(60px, 9vw, 140px) clamp(20px, 4vw, 48px);
+      --rule-soft: #2a2a2a;
+    }
+
+    .contact-inner {
+      max-width: var(--maxw);
+      margin: 0 auto;
+    }
+
+    .contact .lead-row {
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #999;
+      margin-bottom: 32px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .contact h2 {
+      font-family: var(--display);
+      font-weight: 400;
+      font-size: clamp(48px, 11vw, 200px);
+      line-height: 0.86;
+      letter-spacing: -0.055em;
+      margin-bottom: clamp(40px, 5vw, 64px);
+      text-wrap: balance;
+    }
+
+    .contact h2 .out {
+      -webkit-text-stroke: 1.5px var(--paper);
+      color: transparent;
+      font-weight: 500;
+    }
+
+    .contact h2 .light {
+      font-weight: 300;
+    }
+
+    .contact a.mail {
+      font-family: var(--display);
+      font-size: clamp(22px, 3vw, 40px);
+      border-bottom: 1px solid var(--paper);
+      padding-bottom: 6px;
+      display: inline-block;
+      letter-spacing: -0.02em;
+      font-weight: 400;
+    }
+
+    .contact a.mail:hover {
+      color: #999;
+      border-color: #999;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: clamp(60px, 8vw, 96px);
+      border-top: 1px solid #2a2a2a;
+      padding-top: 32px;
+    }
+
+    .contact-grid .col .label {
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #999;
+      margin-bottom: 12px;
+    }
+
+    .contact-grid .col a,
+    .contact-grid .col p {
+      display: block;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .contact-grid .col a:hover {
+      color: #999;
+    }
+
+    @media (max-width: 720px) {
       .contact-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 24px;
-        margin-top: clamp(60px, 8vw, 96px);
-        border-top: 1px solid #2a2a2a;
-        padding-top: 32px;
+        grid-template-columns: repeat(2, 1fr);
       }
-      .contact-grid .col .label {
-        font-family: var(--mono);
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
-        color: #999;
-        margin-bottom: 12px;
-      }
-      .contact-grid .col a,
-      .contact-grid .col p {
-        display: block;
-        font-size: 14px;
-        line-height: 1.6;
-      }
-      .contact-grid .col a:hover {
-        color: #999;
-      }
-      @media (max-width: 720px) {
-        .contact-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
+    }
+
+    footer {
+      border-top: 1px solid #2a2a2a;
+      margin-top: 64px;
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #999;
+      flex-wrap: wrap;
+    }
+
+    /* ── Print / PDF ─────────────────────────────────────── */
+    @media print {
+      @page {
+        size: A4;
+        margin: 14mm;
       }
 
-      footer {
-        border-top: 1px solid #2a2a2a;
-        margin-top: 64px;
-        padding-top: 24px;
-        display: flex;
-        justify-content: space-between;
-        gap: 16px;
-        font-family: var(--mono);
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
-        color: #999;
-        flex-wrap: wrap;
+      .nav,
+      .strip,
+      .tweaks-panel,
+      .print-btn {
+        display: none !important;
       }
 
-      /* ── Print / PDF ─────────────────────────────────────── */
-      @media print {
-        @page {
-          size: A4;
-          margin: 14mm;
-        }
-        .nav,
-        .strip,
-        .tweaks-panel,
-        .print-btn {
-          display: none !important;
-        }
-        body,
-        .contact {
-          background: white !important;
-          color: black !important;
-        }
-        .hero,
-        section.block,
-        .contact {
-          padding: 24px 0 !important;
-          max-width: 100% !important;
-          page-break-inside: avoid;
-        }
-        .hero h1 {
-          font-size: 64px;
-        }
-        .project {
-          page-break-inside: avoid;
-        }
-        .contact a.mail {
-          color: black;
-          border-color: black;
-        }
-        .contact h2 .out {
-          -webkit-text-stroke-color: black;
-        }
+      body,
+      .contact {
+        background: white !important;
+        color: black !important;
       }
 
-      /* ── Gallery images ───────────────────────────────────── */
-      .gallery .lead,
-      .gallery .half,
-      .gallery .third,
-      .gallery .full {
-        background: #fafafa;
-        border: 1px solid var(--rule-soft);
-        overflow: hidden;
+      .hero,
+      section.block,
+      .contact {
+        padding: 24px 0 !important;
+        max-width: 100% !important;
+        page-break-inside: avoid;
       }
-      .gallery .lead {
-        aspect-ratio: 16 / 10;
+
+      .hero h1 {
+        font-size: 64px;
       }
-      .gallery .half {
-        aspect-ratio: 4 / 3;
+
+      .project {
+        page-break-inside: avoid;
       }
-      .gallery .third {
-        aspect-ratio: 1 / 1;
+
+      .contact a.mail {
+        color: black;
+        border-color: black;
       }
-      .gallery .full {
-        aspect-ratio: 16 / 7;
+
+      .contact h2 .out {
+        -webkit-text-stroke-color: black;
       }
-      .gallery img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-      }
-      .proj-note {
-        font-family: var(--mono);
-        font-size: 10px;
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
-        color: var(--ink-soft);
-        margin-top: 10px;
-        padding: 8px 10px;
-        border-left: 2px solid var(--rule-soft);
-        line-height: 1.5;
-      }
-    </style>
-  </head>
-  <body>
-    <nav class="nav">
-      <div class="left">
-        <a href="#top" class="brand">Diego Gómez Copete</a>
+    }
+
+    /* ── Gallery images ───────────────────────────────────── */
+    .gallery .lead,
+    .gallery .half,
+    .gallery .third,
+    .gallery .full {
+      background: #fafafa;
+      border: 1px solid var(--rule-soft);
+      overflow: hidden;
+    }
+
+    .gallery .lead {
+      aspect-ratio: 16 / 10;
+    }
+
+    .gallery .half {
+      aspect-ratio: 4 / 3;
+    }
+
+    .gallery .third {
+      aspect-ratio: 1 / 1;
+    }
+
+    .gallery .full {
+      aspect-ratio: 16 / 7;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .proj-note {
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-soft);
+      margin-top: 10px;
+      padding: 8px 10px;
+      border-left: 2px solid var(--rule-soft);
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="nav">
+    <div class="left">
+      <a href="#top" class="brand">Diego Gómez Copete</a>
+    </div>
+    <ul>
+      <li><a href="#about" data-i18n="nav.about">About</a></li>
+      <li><a href="#work" data-i18n="nav.work">Work</a></li>
+      <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="right">
+      <span class="status" data-i18n="nav.status">Available</span>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true" title="English (US)">
+          US
+        </button>
+        <button type="button" class="lang-btn" data-lang="es" aria-pressed="false" title="Español (ES)">
+          ES
+        </button>
       </div>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    </div>
+  </nav>
 
-    <header class="hero" id="top">
-      <div class="meta-row">
-        <div><span class="lab">Designer</span>Diego A. Gómez Copete</div>
-        <div><span class="lab">Based in</span>Bogotá, Colombia (UTC−5)</div>
-        <div><span class="lab">Practice</span>UI/UX · Web · Front-end</div>
+  <header class="hero" id="top">
+    <div class="meta-row">
+      <div><span class="lab" data-i18n="hero.labDesigner">Designer</span>Diego A. Gómez Copete</div>
+      <div><span class="lab" data-i18n="hero.labBased">Based in</span><span data-i18n="hero.valBased">Bogotá, Colombia
+          (UTC−5)</span></div>
+      <div><span class="lab" data-i18n="hero.labPractice">Practice</span><span data-i18n="hero.valPractice">UI/UX · Web
+          · Front-end</span></div>
+    </div>
+    <h1 data-i18n="hero.title">
+      Graphic <span class="light">&amp;</span><br />
+      <span class="out">UI/UX</span> designer<br />
+      crafting <span class="light">clear,</span><br />
+      purposeful work.
+    </h1>
+  </header>
+
+  <div class="strip" aria-hidden="true" style="display: none;">
+    <div class="track" data-i18n="strip.track">
+      <span>Web Design</span><span>UI Design</span><span>HTML &amp;
+        CSS</span><span>Front-end</span><span>Responsive</span><span>Digital Media</span><span>Web Design</span><span>UI
+        Design</span><span>HTML &amp; CSS</span><span>Front-end</span><span>Responsive</span><span>Digital Media</span>
+    </div>
+  </div>
+
+  <!-- ── ABOUT ─────────────────────────────────────────── -->
+  <section class="block" id="about">
+    <div class="section-head">
+      <div class="num" data-i18n="about.num">[ <b>01</b> / 04 ] About</div>
+      <h2 data-i18n="about.h2">
+        A designer with a <span class="light">research-led approach.</span>
+      </h2>
+    </div>
+
+    <div class="about-grid">
+      <p class="about-lede" data-i18n="about.lede">
+        <span class="mute">I'm Diego Alejandro Gómez Copete, a Graphic Designer from</span>
+        <em>Universidad Los Libertadores</em>,
+        <span class="mute">based in Bogotá. I help small businesses and agencies turn complex
+          briefs into clean, confident visual systems — with a soft spot for
+          the web.</span>
+      </p>
+      <div class="about-body">
+        <p data-i18n="about.p1">
+          <strong>Background.</strong> I hold a Bachelor's degree in Graphic
+          Design from Universidad Los Libertadores. Across the last several
+          years I've focused on web design, UI, and front-end implementation —
+          designing interfaces and shipping them in code.
+        </p>
+        <p data-i18n="about.p2">
+          <strong>How I work.</strong> Every project starts with research and
+          conceptualization: understanding the audience, the message, and the
+          constraints before a single pixel moves. From there I build
+          strategic, optimal solutions in visual communication that hold up
+          across screens and surfaces.
+        </p>
+        <p data-i18n="about.p3">
+          <strong>What I love.</strong> The intersection of design and code —
+          moments where a thoughtful layout, a well-paired type system, and a
+          few lines of HTML and CSS quietly do real work for a business.
+        </p>
+        <p data-i18n="about.p4">
+          <strong>Always learning.</strong> Picking up new tools, frameworks,
+          and techniques — staying close to current front-end practice and to
+          design tools that make the work better.
+        </p>
       </div>
-      <h1>
-        Graphic <span class="light">&amp;</span><br />
+    </div>
+
+    <div class="facts">
+      <div class="fact">
+        <div class="k" data-i18n="fact.based.k">Based in</div>
+        <div class="v" data-i18n="fact.based.v">Bogotá, CO</div>
+      </div>
+      <div class="fact">
+        <div class="k" data-i18n="fact.edu.k">Education</div>
+        <div class="v" data-i18n="fact.edu.v">U. Los Libertadores</div>
+      </div>
+      <div class="fact">
+        <div class="k" data-i18n="fact.focus.k">Focus</div>
+        <div class="v" data-i18n="fact.focus.v">Web · UI/UX · Front-end</div>
+      </div>
+      <div class="fact">
+        <div class="k" data-i18n="fact.lang.k">Languages</div>
+        <div class="v" data-i18n="fact.lang.v">ES · EN</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WORK ─────────────────────────────────────────── -->
+  <section class="block" id="work">
+    <div class="section-head">
+      <div class="num" data-i18n="work.num">[ <b>02</b> / 04 ] Selected work</div>
+      <h2 data-i18n="work.h2">Projects, in <span class="light">their own words.</span></h2>
+    </div>
+
+    <div class="projects" id="projects-mount"></div>
+  </section>
+
+  <!-- ── SKILLS ─────────────────────────────────────────── -->
+  <section class="block" id="skills">
+    <div class="section-head">
+      <div class="num" data-i18n="skills.num">[ <b>03</b> / 04 ] Capabilities</div>
+      <h2 data-i18n="skills.h2">What I bring to the <span class="light">table.</span></h2>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill">
+        <div class="num">↳ 01</div>
+        <h3 data-i18n="skill.1.title">Web design</h3>
+        <p data-i18n="skill.1.desc">
+          Responsive layouts, design systems, and accessible front-end built
+          with HTML5, CSS3 and modern best practices.
+        </p>
+      </div>
+      <div class="skill">
+        <div class="num">↳ 02</div>
+        <h3 data-i18n="skill.2.title">UI design</h3>
+        <p data-i18n="skill.2.desc">
+          Interfaces grounded in clear hierarchy, considered typography, and
+          meaningful interaction details.
+        </p>
+      </div>
+      <div class="skill">
+        <div class="num">↳ 03</div>
+        <h3 data-i18n="skill.3.title">Front-end</h3>
+        <p data-i18n="skill.3.desc">
+          Hand-coded HTML &amp; CSS, light JavaScript, and a working knowledge
+          of CMS-driven sites.
+        </p>
+      </div>
+    </div>
+
+    <div class="tools-row">
+      <div class="label" data-i18n="skills.toolkit">[ Toolkit ]</div>
+      <span class="tool">Figma</span>
+      <span class="tool">Photoshop</span>
+      <span class="tool">Illustrator</span>
+      <span class="tool">HTML</span>
+      <span class="tool">CSS</span>
+      <span class="tool">JavaScript</span>
+      <span class="tool">React</span>
+
+      <span class="tool">WordPress</span>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ───────────────────────────────────────── -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="lead-row">
+        <span data-i18n="contact.num">[ 04 / 04 ] Contact</span>
+        <span data-i18n="contact.status">↘ Open to freelance &amp; full-time</span>
+      </div>
+      <h2 data-i18n="contact.h2">
+        Let's make<br /><span class="out">something</span>
+        <span class="light">good.</span>
+      </h2>
+      <a href="mailto:diegocopetegrafico@gmail.com" class="mail" data-i18n="contact.mail">diegocopetegrafico@gmail.com
+        →</a>
+
+      <div class="contact-grid">
+        <div class="col">
+          <div class="label" data-i18n="contact.col.email">Email</div>
+          <a href="mailto:diegocopetegrafico@gmail.com">diegocopetegrafico@gmail.com</a>
+        </div>
+        <div class="col">
+          <div class="label" data-i18n="contact.col.linkedin">LinkedIn</div>
+          <a href="https://www.linkedin.com/in/dagomezco/" target="_blank" rel="noopener">/in/dagomezco</a>
+        </div>
+        <div class="col">
+          <div class="label" data-i18n="contact.col.location">Location</div>
+          <p data-i18n="contact.col.locationVal">Bogotá, Colombia<br />UTC−5</p>
+        </div>
+      </div>
+
+      <footer>
+        <span data-i18n="footer.col1">© 2026 Diego A. Gómez Copete</span>
+        <span data-i18n="footer.col2">Designed &amp; built in Bogotá</span>
+        <span data-i18n="footer.col3">v2.0 · Updated 2026</span>
+      </footer>
+    </div>
+  </section>
+
+  <!-- ── Bilingual i18n logic ────────────────────────────── -->
+  <script>
+    (function () {
+      const I18N = {
+        en: {
+          htmlLang: 'en',
+          metaTitle: 'Diego Alejandro Gómez Copete — Graphic & UI/UX Designer',
+          metaDesc:
+            'Portfolio of Diego Alejandro Gómez Copete — Graphic Designer (Universidad Los Libertadores) specializing in web design, UI, and digital media.',
+          'nav.about': 'About',
+          'nav.work': 'Work',
+          'nav.skills': 'Skills',
+          'nav.contact': 'Contact',
+          'nav.status': 'Available',
+          'hero.labDesigner': 'Designer',
+          'hero.labBased': 'Based in',
+          'hero.valBased': 'Bogotá, Colombia (UTC−5)',
+          'hero.labPractice': 'Practice',
+          'hero.valPractice': 'UI/UX · Web · Front-end',
+          'hero.title': `Graphic <span class="light">&amp;</span><br />
         <span class="out">UI/UX</span> designer<br />
         crafting <span class="light">clear,</span><br />
-        purposeful work.
-      </h1>
-    </header>
-
-    <!-- <div class="strip" aria-hidden="true">
-      <div class="track">
-        <span>Web Design</span><span>UI Design</span><span>HTML &amp; CSS</span
-        ><span>Front-end</span><span>Responsive</span><span>Digital Media</span
-        ><span>Web Design</span><span>UI Design</span><span>HTML &amp; CSS</span
-        ><span>Front-end</span><span>Responsive</span><span>Digital Media</span>
-      </div>
-    </div> -->
-
-    <!-- ── ABOUT ─────────────────────────────────────────── -->
-    <section class="block" id="about">
-      <div class="section-head">
-        <div class="num">[ <b>01</b> / 04 ] About</div>
-        <h2>
-          A designer with a <span class="light">research-led approach.</span>
-        </h2>
-      </div>
-
-      <div class="about-grid">
-        <p class="about-lede">
-          <span class="mute"
-            >I'm Diego Alejandro Gómez Copete, a Graphic Designer from</span
-          >
+        purposeful work.`,
+          'strip.track': `<span>Web Design</span><span>UI Design</span><span>HTML &amp; CSS</span><span>Front-end</span><span>Responsive</span><span>Digital Media</span><span>Web Design</span><span>UI Design</span><span>HTML &amp; CSS</span><span>Front-end</span><span>Responsive</span><span>Digital Media</span>`,
+          'about.num': '[ <b>01</b> / 04 ] About',
+          'about.h2':
+            'A designer with a <span class="light">research-led approach.</span>',
+          'about.lede': `<span class="mute">I'm Diego Alejandro Gómez Copete, a Graphic Designer from</span>
           <em>Universidad Los Libertadores</em>,
-          <span class="mute"
-            >based in Bogotá. I help small businesses and agencies turn complex
+          <span class="mute">based in Bogotá. I help small businesses and agencies turn complex
             briefs into clean, confident visual systems — with a soft spot for
-            the web.</span
-          >
-        </p>
-        <div class="about-body">
-          <p>
-            <strong>Background.</strong> I hold a Bachelor's degree in Graphic
+            the web.</span>`,
+          'about.p1': `<strong>Background.</strong> I hold a Bachelor's degree in Graphic
             Design from Universidad Los Libertadores. Across the last several
             years I've focused on web design, UI, and front-end implementation —
-            designing interfaces and shipping them in code.
-          </p>
-          <p>
-            <strong>How I work.</strong> Every project starts with research and
+            designing interfaces and shipping them in code.`,
+          'about.p2': `<strong>How I work.</strong> Every project starts with research and
             conceptualization: understanding the audience, the message, and the
             constraints before a single pixel moves. From there I build
             strategic, optimal solutions in visual communication that hold up
-            across screens and surfaces.
-          </p>
-          <p>
-            <strong>What I love.</strong> The intersection of design and code —
+            across screens and surfaces.`,
+          'about.p3': `<strong>What I love.</strong> The intersection of design and code —
             moments where a thoughtful layout, a well-paired type system, and a
-            few lines of HTML and CSS quietly do real work for a business.
-          </p>
-          <p>
-            <strong>Always learning.</strong> Picking up new tools, frameworks,
+            few lines of HTML and CSS quietly do real work for a business.`,
+          'about.p4': `<strong>Always learning.</strong> Picking up new tools, frameworks,
             and techniques — staying close to current front-end practice and to
-            design tools that make the work better.
-          </p>
-        </div>
-      </div>
+            design tools that make the work better.`,
+          'fact.based.k': 'Based in',
+          'fact.based.v': 'Bogotá, CO',
+          'fact.edu.k': 'Education',
+          'fact.edu.v': 'U. Los Libertadores',
+          'fact.focus.k': 'Focus',
+          'fact.focus.v': 'Web · UI/UX · Front-end',
+          'fact.lang.k': 'Languages',
+          'fact.lang.v': 'ES · EN',
+          'work.num': '[ <b>02</b> / 04 ] Selected work',
+          'work.h2': 'Projects, in <span class="light">their own words.</span>',
+          'skills.num': '[ <b>03</b> / 04 ] Capabilities',
+          'skills.h2': 'What I bring to the <span class="light">table.</span>',
+          'skill.1.title': 'Web design',
+          'skill.1.desc':
+            'Responsive layouts, design systems, and accessible front-end built with HTML5, CSS3 and modern best practices.',
+          'skill.2.title': 'UI design',
+          'skill.2.desc':
+            'Interfaces grounded in clear hierarchy, considered typography, and meaningful interaction details.',
+          'skill.3.title': 'Front-end',
+          'skill.3.desc':
+            'Hand-coded HTML &amp; CSS, light JavaScript, and a working knowledge of CMS-driven sites.',
+          'skills.toolkit': '[ Toolkit ]',
+          'contact.num': '[ 04 / 04 ] Contact',
+          'contact.status': '↘ Open to freelance &amp; full-time',
+          'contact.h2': `Let's make<br /><span class="out">something</span>
+          <span class="light">good.</span>`,
+          'contact.mail': 'diegocopetegrafico@gmail.com →',
+          'contact.col.email': 'Email',
+          'contact.col.linkedin': 'LinkedIn',
+          'contact.col.location': 'Location',
+          'contact.col.locationVal': 'Bogotá, Colombia<br />UTC−5',
+          'footer.col1': '© 2026 Diego A. Gómez Copete',
+          'footer.col2': 'Designed &amp; built in Bogotá',
+          'footer.col3': 'v2.0 · Updated 2026'
+        },
+        es: {
+          htmlLang: 'es',
+          metaTitle: 'Diego Alejandro Gómez Copete — Diseñador Gráfico & UI/UX',
+          metaDesc:
+            'Portafolio de Diego Alejandro Gómez Copete — Diseñador gráfico especializado en diseño web, interfaces UI/UX y maquetación front-end en Bogotá, Colombia.',
+          'nav.about': 'Sobre mí',
+          'nav.work': 'Proyectos',
+          'nav.skills': 'Habilidades',
+          'nav.contact': 'Contacto',
+          'nav.status': 'Disponible para proyectos',
+          'hero.labDesigner': 'Diseñador',
+          'hero.labBased': 'Ubicación',
+          'hero.valBased': 'Bogotá, Colombia (UTC−5)',
+          'hero.labPractice': 'Especialidad',
+          'hero.valPractice': 'UI/UX · Web · Front-end',
+          'hero.title': `Diseñador <span class="light">gráfico &amp;</span><br />
+        <span class="out">UI/UX,</span> creando<br />
+        proyectos <span class="light">claros y</span><br />
+        con propósito.`,
+          'strip.track': `<span>Diseño Web</span><span>Diseño UI</span><span>HTML &amp; CSS</span><span>Front-end</span><span>Diseño Responsive</span><span>Medios Digitales</span><span>Diseño Web</span><span>Diseño UI</span><span>HTML &amp; CSS</span><span>Front-end</span><span>Diseño Responsive</span><span>Medios Digitales</span>`,
+          'about.num': '[ <b>01</b> / 04 ] Sobre mí',
+          'about.h2':
+            'Diseño impulsado por la <span class="light">investigación y el concepto.</span>',
+          'about.lede': `<span class="mute">Soy Diego Alejandro Gómez Copete, Diseñador Gráfico de la</span>
+          <em>Universidad Los Libertadores</em>,
+          <span class="mute">con base en Bogotá. Ayudo a marcas y agencias a transformar requerimientos complejos en identidades y sistemas visuales sólidos, claros y funcionales — con un cariño especial por el diseño web.</span>`,
+          'about.p1': `<strong>Perfil.</strong> Soy graduado en Diseño Gráfico de la Universidad Los Libertadores. En los últimos años me he enfocado en diseño web, UI y desarrollo front-end: creando interfaces desde cero y llevándolas a la realidad directamente en código.`,
+          'about.p2': `<strong>Metodología.</strong> Todo proyecto comienza con investigación y conceptualización: entender a fondo a la audiencia, el mensaje y las necesidades reales antes de mover un solo píxel. A partir de ahí, construyo soluciones visuales estratégicas que funcionan de forma impecable en cualquier pantalla.`,
+          'about.p3': `<strong>Lo que disfruto.</strong> El punto de encuentro entre diseño y desarrollo: esos momentos donde una diagramación cuidada, una tipografía precisa y unas líneas de HTML y CSS aportan un valor real y medible a un negocio.`,
+          'about.p4': `<strong>En constante evolución.</strong> Aprendiendo continuamente nuevas herramientas, frameworks y técnicas para mantenerme al día con los estándares de la web moderna y elevar el nivel de cada entrega.`,
+          'fact.based.k': 'Ubicación',
+          'fact.based.v': 'Bogotá, CO',
+          'fact.edu.k': 'Formación',
+          'fact.edu.v': 'U. Los Libertadores',
+          'fact.focus.k': 'Especialidad',
+          'fact.focus.v': 'Web · UI/UX · Front-end',
+          'fact.lang.k': 'Idiomas',
+          'fact.lang.v': 'Español · Inglés',
+          'work.num': '[ <b>02</b> / 04 ] Proyectos destacados',
+          'work.h2': 'Proyectos que <span class="light">hablan por sí mismos.</span>',
+          'skills.num': '[ <b>03</b> / 04 ] Habilidades',
+          'skills.h2': 'Lo que aporto a <span class="light">cada proyecto.</span>',
+          'skill.1.title': 'Diseño web',
+          'skill.1.desc':
+            'Diseño adaptable (responsive), sistemas de diseño modulares y maquetación web accesible siguiendo los estándares modernos de HTML5 y CSS3.',
+          'skill.2.title': 'Diseño de interfaces (UI)',
+          'skill.2.desc':
+            'Estructuras visuales con jerarquía clara, tipografía estudiada y microinteracciones pensadas para una navegación intuitiva.',
+          'skill.3.title': 'Desarrollo front-end',
+          'skill.3.desc':
+            'Código limpio en HTML y CSS, interactividad con JavaScript y experiencia sólida implementando sitios sobre CMS y plataformas web.',
+          'skills.toolkit': '[ Herramientas ]',
+          'contact.num': '[ 04 / 04 ] Contacto',
+          'contact.status': '↘ Abierto a proyectos freelance y tiempo completo',
+          'contact.h2': `Creemos algo<br /><span class="out">realmente</span>
+          <span class="light">bueno.</span>`,
+          'contact.mail': 'diegocopetegrafico@gmail.com →',
+          'contact.col.email': 'Correo',
+          'contact.col.linkedin': 'LinkedIn',
+          'contact.col.location': 'Ubicación',
+          'contact.col.locationVal': 'Bogotá, Colombia<br />UTC−5',
+          'footer.col1': '© 2026 Diego A. Gómez Copete',
+          'footer.col2': 'Diseñado y desarrollado en Bogotá',
+          'footer.col3': 'v2.0 · Actualizado 2026'
+        }
+      };
 
-      <div class="facts">
-        <div class="fact">
-          <div class="k">Based in</div>
-          <div class="v">Bogotá, CO</div>
-        </div>
-        <div class="fact">
-          <div class="k">Education</div>
-          <div class="v">U. Los Libertadores</div>
-        </div>
-        <div class="fact">
-          <div class="k">Focus</div>
-          <div class="v">Web · UI/UX · Front-end</div>
-        </div>
-        <div class="fact">
-          <div class="k">Languages</div>
-          <div class="v">ES · EN</div>
-        </div>
-      </div>
-    </section>
+      function getInitialLang() {
+        const params = new URLSearchParams(window.location.search);
+        const pLang = params.get('lang');
+        if (pLang && (pLang === 'es' || pLang === 'en')) return pLang;
+        const saved = localStorage.getItem('portfolio_lang');
+        if (saved && (saved === 'es' || saved === 'en')) return saved;
+        return 'en'; // US default
+      }
 
-    <!-- ── WORK ─────────────────────────────────────────── -->
-    <section class="block" id="work">
-      <div class="section-head">
-        <div class="num">[ <b>02</b> / 04 ] Selected work</div>
-        <h2>Projects, in <span class="light">their own words.</span></h2>
-      </div>
+      let currentLang = getInitialLang();
+      window.__portfolioLang = currentLang;
 
-      <div class="projects" id="projects-mount"></div>
-    </section>
+      function applyLanguage(lang) {
+        if (!I18N[lang]) lang = 'en';
+        currentLang = lang;
+        window.__portfolioLang = lang;
 
-    <!-- ── SKILLS ─────────────────────────────────────────── -->
-    <section class="block" id="skills">
-      <div class="section-head">
-        <div class="num">[ <b>03</b> / 04 ] Capabilities</div>
-        <h2>What I bring to the <span class="light">table.</span></h2>
-      </div>
+        document.documentElement.lang = I18N[lang].htmlLang || lang;
+        if (I18N[lang].metaTitle) document.title = I18N[lang].metaTitle;
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc && I18N[lang].metaDesc) {
+          metaDesc.setAttribute('content', I18N[lang].metaDesc);
+        }
 
-      <div class="skills-grid">
-        <div class="skill">
-          <div class="num">↳ 01</div>
-          <h3>Web design</h3>
-          <p>
-            Responsive layouts, design systems, and accessible front-end built
-            with HTML5, CSS3 and modern best practices.
-          </p>
-        </div>
-        <div class="skill">
-          <div class="num">↳ 02</div>
-          <h3>UI design</h3>
-          <p>
-            Interfaces grounded in clear hierarchy, considered typography, and
-            meaningful interaction details.
-          </p>
-        </div>
-        <div class="skill">
-          <div class="num">↳ 03</div>
-          <h3>Front-end</h3>
-          <p>
-            Hand-coded HTML &amp; CSS, light JavaScript, and a working knowledge
-            of CMS-driven sites.
-          </p>
-        </div>
-      </div>
+        document.querySelectorAll('[data-i18n]').forEach((el) => {
+          const key = el.getAttribute('data-i18n');
+          if (I18N[lang] && I18N[lang][key] !== undefined) {
+            el.innerHTML = I18N[lang][key];
+          }
+        });
 
-      <div class="tools-row">
-        <div class="label">[ Toolkit ]</div>
-        <span class="tool">Figma</span>
-        <span class="tool">Photoshop</span>
-        <span class="tool">Illustrator</span>
-        <span class="tool">HTML</span>
-        <span class="tool">CSS</span>
-        <span class="tool">JavaScript</span>
-        <span class="tool">React</span>
+        document.querySelectorAll('.lang-btn').forEach((btn) => {
+          const btnLang = btn.getAttribute('data-lang');
+          const isActive = btnLang === lang;
+          btn.classList.toggle('active', isActive);
+          btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        });
 
-        <span class="tool">WordPress</span>
-      </div>
-    </section>
+        localStorage.setItem('portfolio_lang', lang);
+        window.dispatchEvent(
+          new CustomEvent('portfolio:langchange', { detail: { lang } })
+        );
+      }
 
-    <!-- ── CONTACT ───────────────────────────────────────── -->
-    <section class="contact" id="contact">
-      <div class="contact-inner">
-        <div class="lead-row">
-          <span>[ 04 / 04 ] Contact</span>
-          <span>↘ Open to freelance &amp; full-time</span>
-        </div>
-        <h2>
-          Let's make<br /><span class="out">something</span>
-          <span class="light">good.</span>
-        </h2>
-        <a href="mailto:diegocopetegrafico@gmail.com" class="mail"
-          >diegocopetegrafico@gmail.com →</a
-        >
+      window.setPortfolioLang = applyLanguage;
 
-        <div class="contact-grid">
-          <div class="col">
-            <div class="label">Email</div>
-            <a href="mailto:diegocopetegrafico@gmail.com"
-              >diegocopetegrafico@gmail.com</a
-            >
-          </div>
-          <div class="col">
-            <div class="label">LinkedIn</div>
-            <a
-              href="https://www.linkedin.com/in/dagomezco/"
-              target="_blank"
-              rel="noopener"
-              >/in/dagomezco</a
-            >
-          </div>
-          <div class="col">
-            <div class="label">Location</div>
-            <p>Bogotá, Colombia<br />UTC−5</p>
-          </div>
-        </div>
+      function initLang() {
+        document.querySelectorAll('.lang-btn').forEach((btn) => {
+          btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            const lang = this.getAttribute('data-lang');
+            applyLanguage(lang);
+          });
+        });
+        applyLanguage(currentLang);
+      }
 
-        <footer>
-          <span>© 2026 Diego A. Gómez Copete</span>
-          <span>Designed &amp; built in Bogotá</span>
-          <span>v2.0 · Updated 2026</span>
-        </footer>
-      </div>
-    </section>
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initLang);
+      } else {
+        initLang();
+      }
+    })();
+  </script>
 
-    <script type="text/babel" src="tweaks-panel.jsx"></script>
+  <script type="text/babel" src="tweaks-panel.jsx"></script>
 
-    <script type="text/babel" data-presets="env,react">
-      const PROJECTS = [
+  <script type="text/babel" data-presets="env,react">
+    const PROJECTS_DATA = {
+      en: [
         {
           n: '01',
           title: 'First Arriving',
-          meta: ['UI design', 'Web design', 'Current'],
+          meta: ['UI design', 'Web design'],
           desc: 'Ongoing UI and product design for First Arriving — designing interfaces and visual systems for a suite of dispatch and emergency-response software serving the public-safety community.',
           note: 'See the work done for this platform →',
           url: 'https://firstarriving.com/platform/',
@@ -1057,6 +1434,7 @@
           meta: ['Web design', 'Edu-tech', '2021'],
           desc: 'Education platform marketing site — a friendlier, brighter system designed to convert prospective students into program inquiries.',
           url: 'http://www.stmeducation.co/',
+          urlLabel: 'Visit live site',
           flip: true,
           slots: [
             {
@@ -1066,150 +1444,249 @@
             }
           ]
         }
+      ],
+      es: [
+        {
+          n: '01',
+          title: 'First Arriving',
+          meta: ['Diseño UI', 'Diseño Web', 'En curso'],
+          desc: 'Diseño continuo de interfaces y producto para First Arriving: desarrollo de sistemas visuales y UI para su plataforma de software de despacho y atención de emergencias, dirigida a organismos de seguridad pública.',
+          note: 'Ver el trabajo realizado para esta plataforma →',
+          url: 'https://firstarriving.com/platform/',
+          urlLabel: 'Explorar plataforma',
+          flip: true,
+          slots: [
+            {
+              cls: 'lead',
+              img: 'img/portfolio/first-arriving.jpg',
+              alt: 'Panel de control de First Arriving en múltiples dispositivos'
+            }
+          ]
+        },
+        {
+          n: '02',
+          title: 'Cave Global',
+          meta: ['Diseño Web', 'UI', '2022'],
+          desc: 'Sitio web corporativo para una consultora internacional: refinamiento de su lenguaje visual en páginas de inicio, servicios y contacto, cuidando el ritmo tipográfico y la jerarquía de imágenes.',
+          url: 'http://www.caveglobal.com/',
+          hideVisit: true,
+          slots: [
+            {
+              cls: 'lead',
+              img: 'img/portfolio/1-thumb.jpg',
+              alt: 'Página de inicio de Cave Global'
+            },
+            {
+              cls: 'half',
+              img: 'img/portfolio/3-thumb.jpg',
+              alt: 'Sección de negocios de Cave Global'
+            },
+            {
+              cls: 'half',
+              img: 'img/portfolio/7-thumb.jpg',
+              alt: 'Detalle interior del sitio de Cave Global'
+            }
+          ]
+        },
+        {
+          n: '03',
+          title: 'STM Education',
+          meta: ['Diseño Web', 'EdTech', '2021'],
+          desc: 'Sitio web para una plataforma educativa: diseño fresco, dinámico y cercano, enfocado en conectar con futuros estudiantes y facilitar solicitudes de información sobre los programas.',
+          url: 'http://www.stmeducation.co/',
+          urlLabel: 'Visitar sitio web',
+          flip: true,
+          slots: [
+            {
+              cls: 'lead',
+              img: 'img/portfolio/6-thumb.jpg',
+              alt: 'Página principal de STM Education'
+            }
+          ]
+        }
       ]
+    }
 
-      function Project({ p, total }) {
-        return (
-          <article className={'project' + (p.flip ? ' flip' : '')}>
-            <div className='info'>
-              <div className='index'>
-                <span className='pill'>{p.n}</span>
-                <span>
-                  Project {p.n} / {String(total).padStart(2, '0')}
-                </span>
-              </div>
-              <h3 className='title'>{p.title}</h3>
-              <div className='meta'>
-                {p.meta.map((m, i) => (
-                  <span key={i}>{m}</span>
-                ))}
-              </div>
-              <p className='desc'>{p.desc}</p>
-              {p.note && (
-                <p className='proj-note'>{p.note}</p>
-              )}
-              {p.hideVisit ? null : p.url ? (
-                <a
-                  className='visit'
-                  href={p.url}
-                  target='_blank'
-                  rel='noopener'
-                >
-                  <span>{p.urlLabel || 'Visit live site'}</span>
-                  <svg
-                    viewBox='0 0 12 12'
-                    fill='none'
-                    stroke='currentColor'
-                    strokeWidth='1.4'
-                  >
-                    <path d='M2 10 L10 2 M4 2 H10 V8' strokeLinecap='square' />
-                  </svg>
-                </a>
-              ) : (
-                <span
-                  className='visit'
-                  style={{
-                    cursor: 'default',
-                    background: 'var(--ink)',
-                    color: 'var(--paper)'
-                  }}
-                >
-                  <span>Picture gallery</span>
-                  <svg
-                    viewBox='0 0 12 12'
-                    fill='none'
-                    stroke='currentColor'
-                    strokeWidth='1.4'
-                  >
-                    <rect x='1.5' y='2.5' width='9' height='7' />
-                    <path d='M3 7 L5 5 L7 7 L9 5' strokeLinecap='square' />
-                  </svg>
-                </span>
-              )}
+    function Project({ p, total, lang }) {
+      const isEs = lang === 'es';
+      const projectLabel = isEs
+        ? `Proyecto ${p.n} / ${String(total).padStart(2, '0')}`
+        : `Project ${p.n} / ${String(total).padStart(2, '0')}`;
+      const defaultVisitLabel = isEs ? 'Visitar sitio web' : 'Visit live site';
+      const defaultGalleryLabel = isEs ? 'Galería del proyecto' : 'Picture gallery';
+
+      return (
+        <article className={'project' + (p.flip ? ' flip' : '')}>
+          <div className='info'>
+            <div className='index'>
+              <span className='pill'>{p.n}</span>
+              <span>{projectLabel}</span>
             </div>
-            <div className='gallery'>
-              {p.slots.map((s, i) => (
-                <div key={i} className={s.cls}>
-                  <img src={s.img} alt={s.alt} loading='lazy' />
-                </div>
+            <h3 className='title'>{p.title}</h3>
+            <div className='meta'>
+              {p.meta.map((m, i) => (
+                <span key={i}>{m}</span>
               ))}
             </div>
-          </article>
-        )
-      }
-
-      function App() {
-        return (
-          <>
-            {PROJECTS.map(p => (
-              <Project key={p.n} p={p} total={PROJECTS.length} />
+            <p className='desc'>{p.desc}</p>
+            {p.note && (
+              <p className='proj-note'>{p.note}</p>
+            )}
+            {p.hideVisit ? null : p.url ? (
+              <a
+                className='visit'
+                href={p.url}
+                target='_blank'
+                rel='noopener'
+              >
+                <span>{p.urlLabel || defaultVisitLabel}</span>
+                <svg
+                  viewBox='0 0 12 12'
+                  fill='none'
+                  stroke='currentColor'
+                  strokeWidth='1.4'
+                >
+                  <path d='M2 10 L10 2 M4 2 H10 V8' strokeLinecap='square' />
+                </svg>
+              </a>
+            ) : (
+              <span
+                className='visit'
+                style={{
+                  cursor: 'default',
+                  background: 'var(--ink)',
+                  color: 'var(--paper)'
+                }}
+              >
+                <span>{defaultGalleryLabel}</span>
+                <svg
+                  viewBox='0 0 12 12'
+                  fill='none'
+                  stroke='currentColor'
+                  strokeWidth='1.4'
+                >
+                  <rect x='1.5' y='2.5' width='9' height='7' />
+                  <path d='M3 7 L5 5 L7 7 L9 5' strokeLinecap='square' />
+                </svg>
+              </span>
+            )}
+          </div>
+          <div className='gallery'>
+            {p.slots.map((s, i) => (
+              <div key={i} className={s.cls}>
+                <img src={s.img} alt={s.alt} loading='lazy' />
+              </div>
             ))}
-          </>
-        )
-      }
-
-      ReactDOM.createRoot(document.getElementById('projects-mount')).render(
-        <App />
+          </div>
+        </article>
       )
-    </script>
+    }
 
-    <!-- Tweaks panel -->
-    <script type="text/babel" data-presets="env,react">
-      const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/ {
-        mode: 'light',
-        showStrip: false,
-        headlineWeight: 'mixed'
-      } /*EDITMODE-END*/
+    function App() {
+      const [lang, setLang] = React.useState(() => window.__portfolioLang || 'en')
 
-      function TweaksApp() {
-        const [t, setTweak] = useTweaks(TWEAK_DEFAULTS)
+      React.useEffect(() => {
+        const handleLang = (e) => {
+          setLang(e.detail.lang)
+        }
+        window.addEventListener('portfolio:langchange', handleLang)
+        return () => window.removeEventListener('portfolio:langchange', handleLang)
+      }, [])
 
-        React.useEffect(() => {
-          const root = document.documentElement
-          if (t.mode === 'dark') {
-            root.style.setProperty('--paper', '#0a0a0a')
-            root.style.setProperty('--ink', '#fafafa')
-            root.style.setProperty('--ink-soft', '#888')
-            root.style.setProperty('--rule', '#fafafa')
-            root.style.setProperty('--rule-soft', '#222')
-          } else {
-            root.style.setProperty('--paper', '#ffffff')
-            root.style.setProperty('--ink', '#0a0a0a')
-            root.style.setProperty('--ink-soft', '#6b6b6b')
-            root.style.setProperty('--rule', '#0a0a0a')
-            root.style.setProperty('--rule-soft', '#e5e5e5')
-          }
-          const strip = document.querySelector('.strip')
-          if (strip) strip.style.display = t.showStrip ? '' : 'none'
-        }, [t])
+      const projects = PROJECTS_DATA[lang] || PROJECTS_DATA.en
 
-        return (
-          <TweaksPanel title='Tweaks'>
-            <TweakSection label='Theme'>
-              <TweakRadio
-                label='Mode'
-                value={t.mode}
-                options={[
-                  { label: 'Light', value: 'light' },
-                  { label: 'Dark', value: 'dark' }
-                ]}
-                onChange={v => setTweak('mode', v)}
-              />
-            </TweakSection>
-            <TweakSection label='Layout'>
-              <TweakToggle
-                label='Show marquee strip'
-                value={t.showStrip}
-                onChange={v => setTweak('showStrip', v)}
-              />
-            </TweakSection>
-          </TweaksPanel>
-        )
-      }
+      return (
+        <>
+          {projects.map(p => (
+            <Project key={p.n} p={p} total={projects.length} lang={lang} />
+          ))}
+        </>
+      )
+    }
 
-      const tweaksRoot = document.createElement('div')
-      document.body.appendChild(tweaksRoot)
-      ReactDOM.createRoot(tweaksRoot).render(<TweaksApp />)
-    </script>
-  </body>
+    ReactDOM.createRoot(document.getElementById('projects-mount')).render(
+      <App />
+    )
+  </script>
+
+  <!-- Tweaks panel -->
+  <script type="text/babel" data-presets="env,react">
+    const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/ {
+      mode: 'light',
+      showStrip: false,
+      headlineWeight: 'mixed'
+    } /*EDITMODE-END*/
+
+    function TweaksApp() {
+      const [t, setTweak] = useTweaks(TWEAK_DEFAULTS)
+      const [lang, setLang] = React.useState(() => window.__portfolioLang || 'en')
+
+      React.useEffect(() => {
+        const handle = (e) => setLang(e.detail.lang)
+        window.addEventListener('portfolio:langchange', handle)
+        return () => window.removeEventListener('portfolio:langchange', handle)
+      }, [])
+
+      React.useEffect(() => {
+        const root = document.documentElement
+        if (t.mode === 'dark') {
+          root.style.setProperty('--paper', '#0a0a0a')
+          root.style.setProperty('--ink', '#fafafa')
+          root.style.setProperty('--ink-soft', '#888')
+          root.style.setProperty('--rule', '#fafafa')
+          root.style.setProperty('--rule-soft', '#222')
+        } else {
+          root.style.setProperty('--paper', '#ffffff')
+          root.style.setProperty('--ink', '#0a0a0a')
+          root.style.setProperty('--ink-soft', '#6b6b6b')
+          root.style.setProperty('--rule', '#0a0a0a')
+          root.style.setProperty('--rule-soft', '#e5e5e5')
+        }
+        const strip = document.querySelector('.strip')
+        if (strip) strip.style.display = t.showStrip ? '' : 'none'
+      }, [t])
+
+      return (
+        <TweaksPanel title='Tweaks'>
+          <TweakSection label='Theme'>
+            <TweakRadio
+              label='Mode'
+              value={t.mode}
+              options={[
+                { label: 'Light', value: 'light' },
+                { label: 'Dark', value: 'dark' }
+              ]}
+              onChange={v => setTweak('mode', v)}
+            />
+          </TweakSection>
+          <TweakSection label='Language'>
+            <TweakRadio
+              label='Locale'
+              value={lang}
+              options={[
+                { label: 'US (English)', value: 'en' },
+                { label: 'ES (Español)', value: 'es' }
+              ]}
+              onChange={v => {
+                if (window.setPortfolioLang) window.setPortfolioLang(v)
+              }}
+            />
+          </TweakSection>
+          <TweakSection label='Layout'>
+            <TweakToggle
+              label='Show marquee strip'
+              value={t.showStrip}
+              onChange={v => setTweak('showStrip', v)}
+            />
+          </TweakSection>
+        </TweaksPanel>
+      )
+    }
+
+    const tweaksRoot = document.createElement('div')
+    document.body.appendChild(tweaksRoot)
+    ReactDOM.createRoot(tweaksRoot).render(<TweaksApp />)
+  </script>
+</body>
+
 </html>
